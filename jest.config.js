@@ -8,7 +8,8 @@ const createJestConfig = nextJest({
 /** @type {import('jest').Config} */
 const customJestConfig = {
   testMatch: ['**/*.test.{js,jsx,ts,tsx}'],
-  testEnvironment: 'jsdom',
+  testEnvironment: 'node',
+  setupFiles: ['./jest.setup.js'],
 };
 
 module.exports = createJestConfig(customJestConfig);
