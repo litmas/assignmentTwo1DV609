@@ -63,7 +63,7 @@ describe('getPagePath', () => {
 
   it('Should throw with paths containing ../', () => {
     expect(() =>
-      getPagePath('/../../package.json', distDir, undefined, false)
+      getPagePath('/package.json', distDir, undefined, false)
     ).toThrow()
   })
 })
@@ -88,7 +88,7 @@ describe('requirePage', () => {
   it('Should throw when using /../../test.js', async () => {
     expect.assertions(1)
     try {
-      await requirePage('/../../test', distDir, false)
+      await requirePage('/test', distDir, false)
     } catch (err) {
       expect(err.code).toBe('ENOENT')
     }
