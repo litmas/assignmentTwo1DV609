@@ -1,4 +1,5 @@
 import { TextDecoder, TextEncoder } from 'util';
+import 'jest-extended';
 
 global.TextDecoder = TextDecoder;
 global.TextEncoder = TextEncoder;
